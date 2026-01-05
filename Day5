@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Day 5｜橫濱市區：球場・港未來・纜車・紅磚</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <div class="brand">
+      <div class="brand__title">Day 5</div>
+      <div class="brand__sub">橫濱球場 → 港未來 → 空中纜車夜景 → 紅磚倉庫</div>
+    </div>
+    <nav class="nav">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="day1.html">Day 1</a>
+      <a class="nav__link" href="day2.html">Day 2</a>
+      <a class="nav__link" href="day3.html">Day 3</a>
+      <a class="nav__link" href="day4.html">Day 4</a>
+      <a class="nav__link" href="day5.html">Day 5</a>
+      <a class="nav__link" href="day6.html">Day 6</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="dayHead">
+    <h1 class="dayHead__title">Day 5｜橫濱市區（夜景強）</h1>
+    <div class="dayHead__sub">⚾ 球場｜🛍 MARK IS｜🖼 美術館｜🚡 纜車夜景｜🏭 紅磚（20:00）</div>
+  </div>
+
+  <div class="grid">
+    <section>
+      <div class="section-header h-plan">🗺 行程</div>
+      <div class="section-card">
+        <ul class="list">
+          <li>⚾ 早上：橫濱球場（⚠️ 商店 18:30 關）</li>
+          <li>🛍 下午：港未來（MARK IS、橫濱美術館）</li>
+          <li>🚡 傍晚：櫻木町空中纜車「YOKOHAMA AIR CABIN」夜景</li>
+          <li>🏭 傍晚：紅磚倉庫（⚠️ 商店 20:00 關）</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header h-trans">🚃 交通費（¥）</div>
+      <div class="section-card">
+        <ul class="list">
+          <li>💳 橫濱市區移動：刷 JCB（你已註記）</li>
+          <li>🚆 橫濱 → 關內：¥210</li>
+          <li>🧾 交通費：以當日刷卡明細為準</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header h-food">🍽 三餐</div>
+      <div class="section-card">
+        <ul class="list">
+          <li>🍤 午餐：天丼 <a href="https://maps.app.goo.gl/GbM62AajPRaTV5487" target="_blank" rel="noopener">Google Maps</a></li>
+          <li>🍽 晚餐：（你尚未填，可先留彈性給紅磚/港未來）</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header h-stay">🏨 住宿</div>
+      <div class="section-card">
+        <ul class="list">
+          <li>🏨 ホテル プラム 横浜</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <section>
+    <div class="section-header h-spot">📍 景點介紹</div>
+
+    <div class="spot-card">
+      <h4>⚾ 橫濱球場</h4>
+      <p>球迷行程的幸福點：周邊也很適合散步拍照。你標的「商店 18:30」是重點，如果要買周邊，建議把購物前移，不要留到晚上。</p>
+    </div>
+
+    <div class="spot-card">
+      <h4>🛍 港未來（MARK IS / 橫濱美術館）</h4>
+      <p>逛街＋室內避寒的最佳區域。下午放這裡很聰明：就算天氣不佳也能完成度很高。</p>
+    </div>
+
+    <div class="spot-card">
+      <h4>🚡 YOKOHAMA AIR CABIN（櫻木町空中纜車）</h4>
+      <p>很適合作為傍晚「切換夜景模式」的儀式感。你可以把它當作移動手段＋觀景一次完成，接著再走去紅磚倉庫順到不行。</p>
+    </div>
+
+    <div class="spot-card">
+      <h4>🏭 橫濱紅磚倉庫</h4>
+      <p>夜晚的燈光與港邊風很有氛圍。你已標註 20:00 關門，若想逛店就提早到；如果重點是「街道氣氛」，關門後外面反而更好拍。</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="day4.html">← Prev: Day 4</a><span class="sep">·</span>
+      <a href="day6.html">Next: Day 6 →</a>
+    </div>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
