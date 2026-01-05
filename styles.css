@@ -5,15 +5,15 @@
   --line:rgba(15,23,42,.10);
   --shadow:0 10px 26px rgba(15,23,42,.08);
 
-  /* 主色：深藍（想改墨綠：改成 #0f4a3c） */
-  --accent:#0b3b5f;
-  --accent-weak:rgba(11,59,95,.10);
+ --accent:#0f4a3c;                 /* 主墨綠 */
+--accent-weak:rgba(15,74,60,.10);
 
-  --c-plan:#0b3b5f;   /* 行程 */
-  --c-trans:#0f4a3c;  /* 交通 */
-  --c-food:#a1122b;   /* 三餐 */
-  --c-stay:#4b5563;   /* 住宿 */
-  --c-spot:#1f2937;   /* 景點 */
+--c-plan:#0f4a3c;                 /* 行程：墨綠 */
+--c-trans:#3a6b5a;                /* 交通：淺墨綠 */
+--c-food:#8b2f2f;                 /* 三餐：酒紅 */
+--c-stay:#4b5563;                 /* 住宿：灰 */
+--c-spot:#1f3d34;                 /* 景點：深墨綠 */
+
 
   --radius:16px;
   --max:980px;
