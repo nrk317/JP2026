@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Day 4｜鎌倉・江之島（江之電＋湘南單軌）</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <div class="brand">
+      <div class="brand__title">Day 4</div>
+      <div class="brand__sub">鎌倉 → 長谷 → 高校前 → 江之島 → 湘南單軌回大船</div>
+    </div>
+    <nav class="nav">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="day1.html">Day 1</a>
+      <a class="nav__link" href="day2.html">Day 2</a>
+      <a class="nav__link" href="day3.html">Day 3</a>
+      <a class="nav__link" href="day4.html">Day 4</a>
+      <a class="nav__link" href="day5.html">Day 5</a>
+      <a class="nav__link" href="day6.html">Day 6</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="dayHead">
+    <h1 class="dayHead__title">Day 4｜鎌倉・江之島（精華一日）</h1>
+    <div class="dayHead__sub">⛩ 八幡宮｜🗿 大佛｜🚃 高校前｜🏝 江之島｜🚝 湘南單軌</div>
+  </div>
+
+  <div class="grid">
+    <section>
+      <div class="section-header h-plan">🗺 行程</div>
+      <div class="section-card">
+        <ul class="list">
+          <li>🚆 鎌倉站：鶴岡八幡宮、鎌倉紅谷</li>
+          <li>🚃 長谷站：鎌倉大佛、長谷寺</li>
+          <li>🚃 鎌倉高校前：電車打卡點</li>
+          <li>🏝 江之島：燈塔、江島神社</li>
+          <li>🚝 湘南單軌：湘南江之島 → 大船</li>
+          <li>🚆 回橫濱</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header h-trans">🚃 交通費（¥）</div>
+      <div class="section-card">
+        <ul class="list">
+          <li>🚆 橫濱 → 鎌倉：JR ¥360</li>
+          <li>🎫 江之電一日券：¥800</li>
+          <li>🚝 湘南單軌：湘南江之島 → 大船 ¥320</li>
+          <li>🚆 大船 → 橫濱：JR ¥318</li>
+          <li>🧾 交通費參考：¥1798（含江之電券）</li>
+        </ul>
+        <div class="note">你這天行程段數多，買江之電券很合理。</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header h-food">🍽 三餐</div>
+      <div class="section-card">
+        <ul class="list">
+          <li>🐟 午餐：吻仔魚丼</li>
+          <li>🥘 晚餐：月島文字燒 <a href="https://maps.app.goo.gl/C5bbaXjpjYtwiiJ29" target="_blank" rel="noopener">Google Maps</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header h-stay">🏨 住宿</div>
+      <div class="section-card">
+        <ul class="list">
+          <li>🏨 ホテル プラム 横浜</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <section>
+    <div class="section-header h-spot">📍 景點介紹</div>
+
+    <div class="spot-card">
+      <h4>⛩ 鶴岡八幡宮</h4>
+      <p>鎌倉的代表地標之一，從車站走過去的參道就很有味道。建議把「參道散步＋參拜」當作開場，節奏會很順。</p>
+    </div>
+
+    <div class="spot-card">
+      <h4>🗿 鎌倉大佛（長谷）</h4>
+      <p>大佛本體與周邊氛圍都很強，適合拍「旅行手帳感」照片。你也排了長谷寺，若時間不夠可二選一：想看景觀選長谷寺，想看 iconic 選大佛。</p>
+    </div>
+
+    <div class="spot-card">
+      <h4>🚃 鎌倉高校前平交道</h4>
+      <p>經典打卡點，但人多時需要耐心。建議把拍照當成「短停靠」，不要卡太久，留體力給江之島。</p>
+    </div>
+
+    <div class="spot-card">
+      <h4>🏝 江之島（神社＋燈塔）</h4>
+      <p>如果你想要「海邊散步＋小爬坡＋夜景感」，江之島非常合適。走上島的路很有旅行感，吻仔魚丼也適合放在這段動線中間補能量。</p>
+    </div>
+
+    <div class="spot-card">
+      <h4>🚝 湘南單軌電車</h4>
+      <p>這是你行程的「儀式感交通」：從江之島一路回大船很爽快，還能避免走回原路的疲勞感，最後再接 JR 回橫濱非常順。</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="day3.html">← Prev: Day 3</a><span class="sep">·</span>
+      <a href="day5.html">Next: Day 5 →</a>
+    </div>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
