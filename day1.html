@@ -35,70 +35,164 @@
   </div>
 
   <div class="grid">
+    <!-- 行程 -->
     <section>
       <div class="section-header h-plan">🗺 行程</div>
       <div class="section-card">
-        <ul class="list">
-          <li>✈️ 4:55 抵達成田機場</li>
-          <li>🛍 UNIQLO TOKYO、GU 感謝祭</li>
-          <li>💊 OS Drug</li>
-          <li>🍽 吃飯</li>
-          <li>🌙 皇居外苑、二重橋（夜景散步）</li>
-        </ul>
+        <div class="rows">
+          <div class="row row--soft">
+            <div class="row__icon">✈️</div>
+            <div class="row__body">
+              <p class="row__title">抵達成田機場</p>
+              <p class="row__meta">4:55 抵達（抵達後以「先移動到市區」為優先）</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="row__icon">🛍</div>
+            <div class="row__body">
+              <p class="row__title">UNIQLO TOKYO / GU 感謝祭</p>
+              <p class="row__meta">建議先寄行李（有樂町站置物櫃）再進店，節省時間</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="row__icon">💊</div>
+            <div class="row__body">
+              <p class="row__title">OS Drug 補貨</p>
+              <p class="row__meta">把必買清單先寫好，進去直接掃</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="row__icon">🍽</div>
+            <div class="row__body">
+              <p class="row__title">晚餐（東京車站周邊）</p>
+              <p class="row__meta">吃完再去皇居外苑散步最剛好</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="row__icon">🌙</div>
+            <div class="row__body">
+              <p class="row__title">皇居外苑・二重橋（夜景散步）</p>
+              <p class="row__meta">抓 30 分鐘就很夠，重點是氛圍</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mapBox">
+          <p class="mapBox__title">🗺 Google Maps</p>
+          <div class="mapLinks">
+            <a class="mapLink" href="https://maps.app.goo.gl/AMQv9LvqcLSmH1PY6" target="_blank" rel="noopener">🍽 極味屋（八重洲地下街）</a>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- 交通 -->
     <section>
-      <div class="section-header h-trans">🚃 交通費（¥）</div>
+      <div class="section-header h-trans">🚃 交通</div>
       <div class="section-card">
-        <ul class="list">
-          <li>🚄 Skyliner（班次：17:22 / 17:43 / 18:03）</li>
-          <li>🚆 三航廈 → 日暮里（依你購票/刷卡）</li>
-          <li>🚆 日暮里 → 有樂町（寄行李）：JR ¥180</li>
-          <li>🚆 有樂町 → 神田：JR ¥180</li>
-          <li>🧾 交通費加總：¥356</li>
-        </ul>
-        <div class="note">你如果希望把 Skyliner 金額也算進「交通費」，把該項補上 ¥ 即可。</div>
+        <div class="rows">
+          <div class="row row--soft">
+            <div class="row__icon">🚄</div>
+            <div class="row__body">
+              <p class="row__title">Skyliner（可選班次）</p>
+              <p class="row__meta">17:22 / 17:43 / 18:03</p>
+            </div>
+            <div class="badges">
+              <span class="badge">金額未填</span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="row__icon">🚆</div>
+            <div class="row__body">
+              <p class="row__title">日暮里 → 有樂町（寄行李）</p>
+              <p class="row__meta">JR</p>
+            </div>
+            <div class="badges">
+              <span class="badge badge--money">¥180</span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="row__icon">🚆</div>
+            <div class="row__body">
+              <p class="row__title">有樂町 → 神田</p>
+              <p class="row__meta">JR</p>
+            </div>
+            <div class="badges">
+              <span class="badge badge--money">¥180</span>
+            </div>
+          </div>
+
+          <div class="kv">
+            <div class="kv__left">
+              <p class="kv__k">🧾 交通費加總（不含 Skyliner）</p>
+              <p class="kv__v">¥356</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- 三餐 -->
     <section>
       <div class="section-header h-food">🍽 三餐</div>
       <div class="section-card">
-        <ul class="list">
-          <li>🍽 晚餐：東京車站八重洲地下街美食區「極味屋」<a href="https://maps.app.goo.gl/AMQv9LvqcLSmH1PY6" target="_blank" rel="noopener">Google Maps</a></li>
-          <li>🅱️ 備案：利久牛舌</li>
-        </ul>
+        <div class="rows">
+          <div class="row row--soft">
+            <div class="row__icon">🍽</div>
+            <div class="row__body">
+              <p class="row__title">晚餐：極味屋</p>
+              <p class="row__meta">東京車站八重洲地下街美食區</p>
+            </div>
+            <div class="badges">
+              <span class="badge">備案：利久牛舌</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mapBox">
+          <p class="mapBox__title">🗺 Google Maps</p>
+          <div class="mapLinks">
+            <a class="mapLink" href="https://maps.app.goo.gl/AMQv9LvqcLSmH1PY6" target="_blank" rel="noopener">🍽 極味屋</a>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- 住宿 -->
     <section>
       <div class="section-header h-stay">🏨 住宿</div>
       <div class="section-card">
-        <ul class="list">
-          <li>🏨 コンフォートホテル 東京神田</li>
-          <li>🍳 早餐：有</li>
-        </ul>
+        <div class="rows">
+          <div class="row row--soft">
+            <div class="row__icon">🏨</div>
+            <div class="row__body">
+              <p class="row__title">コンフォートホテル 東京神田</p>
+              <p class="row__meta">早餐：有</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </div>
 
+  <!-- 景點介紹 -->
   <section>
     <div class="section-header h-spot">📍 景點介紹</div>
 
     <div class="spot-card">
-      <h4>🛍 UNIQLO TOKYO（有樂町）</h4>
-      <p>大店好逛、尺碼齊，適合「一次把需要的基本款補齊」。你這天重點是別把時間浪費在搬行李：建議先把行李寄在有樂町站附近置物櫃再進店。</p>
+      <h4>🛍 有樂町購物動線（UNIQLO / GU）</h4>
+      <p>Day 1 的關鍵是「效率」：先寄行李再逛，購物清單先寫好，避免店內猶豫浪費時間。</p>
     </div>
 
     <div class="spot-card">
-      <h4>🌙 皇居外苑・二重橋夜景</h4>
-      <p>如果你想快速感受「東京市中心的寬闊感」，皇居外苑很加分：燈光、護城河與橋景很有氛圍。建議以「30 分鐘散步」為目標，不用走太遠。</p>
-    </div>
-
-    <div class="spot-card">
-      <h4>🍽 八重洲地下街</h4>
-      <p>晚到也不怕冷、也不怕雨：店多、動線直覺。你安排的「極味屋」很適合當主攻點，旁邊也有很多備案可切換。</p>
+      <h4>🌙 皇居外苑・二重橋</h4>
+      <p>很適合當作「東京第一晚的儀式感」。不用走很久，抓 30 分鐘散步＋拍照就很夠。</p>
     </div>
   </section>
 
