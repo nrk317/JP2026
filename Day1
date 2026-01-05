@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Day 1｜抵達東京</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <div class="brand">
+      <div class="brand__title">Day 1</div>
+      <div class="brand__sub">抵達東京｜購物＋夜景散步｜住神田</div>
+    </div>
+    <nav class="nav">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="day1.html">Day 1</a>
+      <a class="nav__link" href="day2.html">Day 2</a>
+      <a class="nav__link" href="day3.html">Day 3</a>
+      <a class="nav__link" href="day4.html">Day 4</a>
+      <a class="nav__link" href="day5.html">Day 5</a>
+      <a class="nav__link" href="day6.html">Day 6</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="dayHead">
+    <h1 class="dayHead__title">Day 1｜抵達東京</h1>
+    <div class="dayHead__sub">✈️ 成田 → 🚄 Skyliner → 🛍 有樂町 → 🌙 皇居外苑 → 🏨 神田</div>
+  </div>
+
+  <div class="grid">
+    <section>
+      <div class="section-header h-plan">🗺 行程</div>
+      <div class="section-card">
+        <ul class="list">
+          <li>✈️ 4:55 抵達成田機場</li>
+          <li>🛍 UNIQLO TOKYO、GU 感謝祭</li>
+          <li>💊 OS Drug</li>
+          <li>🍽 吃飯</li>
+          <li>🌙 皇居外苑、二重橋（夜景散步）</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header h-trans">🚃 交通費（¥）</div>
+      <div class="section-card">
+        <ul class="list">
+          <li>🚄 Skyliner（班次：17:22 / 17:43 / 18:03）</li>
+          <li>🚆 三航廈 → 日暮里（依你購票/刷卡）</li>
+          <li>🚆 日暮里 → 有樂町（寄行李）：JR ¥180</li>
+          <li>🚆 有樂町 → 神田：JR ¥180</li>
+          <li>🧾 交通費加總：¥356</li>
+        </ul>
+        <div class="note">你如果希望把 Skyliner 金額也算進「交通費」，把該項補上 ¥ 即可。</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header h-food">🍽 三餐</div>
+      <div class="section-card">
+        <ul class="list">
+          <li>🍽 晚餐：東京車站八重洲地下街美食區「極味屋」<a href="https://maps.app.goo.gl/AMQv9LvqcLSmH1PY6" target="_blank" rel="noopener">Google Maps</a></li>
+          <li>🅱️ 備案：利久牛舌</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header h-stay">🏨 住宿</div>
+      <div class="section-card">
+        <ul class="list">
+          <li>🏨 コンフォートホテル 東京神田</li>
+          <li>🍳 早餐：有</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <section>
+    <div class="section-header h-spot">📍 景點介紹</div>
+
+    <div class="spot-card">
+      <h4>🛍 UNIQLO TOKYO（有樂町）</h4>
+      <p>大店好逛、尺碼齊，適合「一次把需要的基本款補齊」。你這天重點是別把時間浪費在搬行李：建議先把行李寄在有樂町站附近置物櫃再進店。</p>
+    </div>
+
+    <div class="spot-card">
+      <h4>🌙 皇居外苑・二重橋夜景</h4>
+      <p>如果你想快速感受「東京市中心的寬闊感」，皇居外苑很加分：燈光、護城河與橋景很有氛圍。建議以「30 分鐘散步」為目標，不用走太遠。</p>
+    </div>
+
+    <div class="spot-card">
+      <h4>🍽 八重洲地下街</h4>
+      <p>晚到也不怕冷、也不怕雨：店多、動線直覺。你安排的「極味屋」很適合當主攻點，旁邊也有很多備案可切換。</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="index.html">← Home</a><span class="sep">·</span>
+      <a href="day2.html">Next: Day 2 →</a>
+    </div>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
