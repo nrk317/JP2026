@@ -190,6 +190,161 @@ a:hover{text-decoration:underline;}
   .meta{grid-template-columns:1fr;}
   .toc__grid{grid-template-columns:1fr;}
   .grid{grid-template-columns:1fr;}
+  /* =============== V2：閱讀更舒服的「手帳卡片列」 =============== */
+
+.section-card{ background:#ffffff; } /* 讓區塊本體更乾淨 */
+
+.rows{
+  margin-top:10px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.row{
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 12px;
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+}
+
+.row--soft{
+  background: linear-gradient(180deg, rgba(11,59,95,.04), transparent);
+}
+
+.row__icon{
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 16px;
+  flex: 0 0 auto;
+  background: rgba(15,23,42,.06);
+  color: var(--text);
+}
+
+.row__body{
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.row__title{
+  margin:0;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: .1px;
+}
+
+.row__meta{
+  margin-top:4px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.row__meta a{
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(11,59,95,.35);
+}
+.row__meta a:hover{ border-bottom-style: solid; }
+
+.badges{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+  margin-top:8px;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid var(--line);
+  background: rgba(15,23,42,.03);
+  color: var(--text);
+}
+
+.badge--money{
+  border-color: rgba(11,59,95,.25);
+  background: rgba(11,59,95,.10);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.badge--warn{
+  border-color: rgba(161,18,43,.22);
+  background: rgba(161,18,43,.10);
+  color: #8b1025;
+  font-weight: 700;
+}
+
+.kv{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  justify-content:space-between;
+  padding: 10px 12px;
+  border: 1px dashed var(--line);
+  border-radius: 14px;
+  background: rgba(15,23,42,.02);
+  margin-top:10px;
+}
+
+.kv__left{min-width:0;}
+.kv__k{
+  font-size:12px;
+  color: var(--muted);
+  margin:0;
+}
+.kv__v{
+  margin:2px 0 0;
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+
+.mapBox{
+  margin-top:10px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+  background: #ffffff;
+}
+.mapBox__title{
+  margin:0 0 8px;
+  font-weight: 800;
+  font-size: 13px;
+  color: var(--accent);
+}
+.mapLinks{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.mapLink{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(11,59,95,.20);
+  background: rgba(11,59,95,.06);
+  color: var(--accent);
+  text-decoration:none;
+  font-size: 12px;
+  font-weight: 700;
+}
+.mapLink:hover{
+  background: rgba(11,59,95,.10);
+}
+
   .topbar__inner{flex-direction:column; align-items:flex-start;}
   .nav{width:100%;}
 }
