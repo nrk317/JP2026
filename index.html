@@ -3,252 +3,93 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>東京・橫濱 2026 行程</title>
-  <meta name="description" content="東京・橫濱・鎌倉・江之島｜旅行手帳感｜單頁行程網站" />
-
-  <!-- 日系乾淨字體 -->
+  <title>Japan Trip 2026｜行程目錄</title>
+  <meta name="description" content="東京・橫濱 2026 行程｜旅行手帳感｜Day 1–Day 6" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <header class="topbar">
-    <div class="wrap topbar__inner">
-      <div class="brand">
-        <div class="brand__title">東京・橫濱 2026</div>
-        <div class="brand__sub">旅行手帳｜單頁 Scroll｜手機友善</div>
-      </div>
-
-      <nav class="nav" aria-label="頁面目錄">
-        <a class="nav__link" href="#overview">Overview</a>
-        <a class="nav__link" href="#day1">Day 1</a>
-        <a class="nav__link" href="#day2">Day 2</a>
-        <a class="nav__link" href="#day3">Day 3</a>
-        <a class="nav__link" href="#day4">Day 4</a>
-        <a class="nav__link" href="#day5">Day 5</a>
-        <a class="nav__link" href="#day6">Day 6</a>
-        <a class="nav__link nav__link--muted" href="#tips">Tips</a>
-      </nav>
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <div class="brand">
+      <div class="brand__title">Japan Trip 2026</div>
+      <div class="brand__sub">旅行手帳感｜多頁版｜東京・橫濱・鎌倉・江之島</div>
     </div>
-  </header>
+    <nav class="nav" aria-label="頁面導覽">
+      <a class="nav__link is-active" href="index.html">Home</a>
+      <a class="nav__link" href="day1.html">Day 1</a>
+      <a class="nav__link" href="day2.html">Day 2</a>
+      <a class="nav__link" href="day3.html">Day 3</a>
+      <a class="nav__link" href="day4.html">Day 4</a>
+      <a class="nav__link" href="day5.html">Day 5</a>
+      <a class="nav__link" href="day6.html">Day 6</a>
+    </nav>
+  </div>
+</header>
 
-  <main class="wrap">
+<main class="wrap">
+  <section class="hero">
+    <div class="hero__card">
+      <h1 class="hero__title">行程目錄</h1>
+      <p class="hero__desc">
+        每一天固定區塊：🗺 行程／🚃 交通費／🍽 三餐／🏨 住宿／📍 景點介紹。<br>
+        交通費只列金額，不列時間（你指定的規則）。
+      </p>
 
-    <!-- Overview -->
-    <section id="overview" class="hero">
-      <div class="hero__card">
-        <h1 class="hero__title">行程總覽</h1>
-        <p class="hero__desc">
-          風格：簡潔日系／旅行手帳感。每一天固定四欄：<strong>行程</strong>、<strong>交通（含費用）</strong>、<strong>三餐</strong>、<strong>住宿</strong>。
-        </p>
-
-        <div class="meta">
-          <div class="meta__item">
-            <div class="meta__k">行程版本</div>
-            <div class="meta__v">Notion 公開版 v1</div>
-          </div>
-          <div class="meta__item">
-            <div class="meta__k">範圍</div>
-            <div class="meta__v">東京・橫濱 6 天</div>
-          </div>
-          <div class="meta__item">
-            <div class="meta__k">提醒</div>
-            <div class="meta__v">連假/人潮日請避免鎌倉江之島</div>
-          </div>
+      <div class="meta">
+        <div class="meta__item">
+          <div class="meta__k">住宿</div>
+          <div class="meta__v">D1–D2 神田｜D3–D5 橫濱</div>
         </div>
-
-        <div class="twoCol">
-          <div class="panel">
-            <h3 class="panel__title">費用（From Notion）</h3>
-            <ul class="list">
-              <li>去程機票：6800</li>
-              <li>回程機票：11000</li>
-              <li>東京住宿：3400</li>
-              <li>橫濱住宿：8100</li>
-              <li>Skyliner 票：548</li>
-              <li>eSIM：379</li>
-              <li>保險：742</li>
-            </ul>
-          </div>
-
-          <div class="panel">
-            <h3 class="panel__title">待辦事項（From Notion）</h3>
-            <ul class="list">
-              <li>橫濱纜車 + 摩天輪（前一天再買）</li>
-              <li>江之電一日券</li>
-            </ul>
-          </div>
+        <div class="meta__item">
+          <div class="meta__k">重點日</div>
+          <div class="meta__v">D4 鎌倉・江之島（江之電＋湘南單軌）</div>
         </div>
-
-        <div class="hint">
-          <strong>填寫提示：</strong>Day 2–Day 6 目前是模板。你只要把 Notion 內容複製貼到對應欄位即可上線。
+        <div class="meta__item">
+          <div class="meta__k">提醒</div>
+          <div class="meta__v">東京一番街 20:00 關門｜橫濱球場商店 18:30</div>
         </div>
       </div>
-    </section>
 
-    <!-- Day 1 (已依 Notion 塞入) -->
-    <section id="day1" class="day" data-title="Day 1">
-      <div class="day__head">
-        <h2 class="day__title">Day 1 <span class="day__date">｜D1｜抵達東京・入住神田</span></h2>
-        <div class="day__tag">東京｜抵達日</div>
+      <div class="toc__grid">
+        <a class="tocCard" href="day1.html">
+          <div class="tocCard__k">Day 1｜抵達東京</div>
+          <div class="tocCard__v">UNIQLO／OS Drug／皇居外苑夜景</div>
+        </a>
+        <a class="tocCard" href="day2.html">
+          <div class="tocCard__k">Day 2｜淺草・上野・秋葉原・東京站</div>
+          <div class="tocCard__v">合羽橋 → 淺草寺 → 上野公園&國博 → 秋葉原 → 一番街</div>
+        </a>
+        <a class="tocCard" href="day3.html">
+          <div class="tocCard__k">Day 3｜乃木坂・神宮外苑・新宿 → 橫濱</div>
+          <div class="tocCard__v">乃木神社／神宮球場／西村裕二商店／紀伊國屋</div>
+        </a>
+        <a class="tocCard" href="day4.html">
+          <div class="tocCard__k">Day 4｜鎌倉・江之島（最精華一日）</div>
+          <div class="tocCard__v">鶴岡八幡宮／大佛／高校前／江之島＋單軌回大船</div>
+        </a>
+        <a class="tocCard" href="day5.html">
+          <div class="tocCard__k">Day 5｜橫濱市區：球場・港未來・纜車・紅磚</div>
+          <div class="tocCard__v">夜景重點：YOKOHAMA AIR CABIN → 紅磚倉庫</div>
+        </a>
+        <a class="tocCard" href="day6.html">
+          <div class="tocCard__k">Day 6｜回程</div>
+          <div class="tocCard__v">橫濱 → 羽田（京急本線）</div>
+        </a>
       </div>
+    </div>
+  </section>
 
-      <div class="grid">
-        <article class="card">
-          <h3 class="card__title">行程</h3>
-          <ul class="list">
-            <li>✈️ 4:55 抵達成田機場</li>
-            <li>🚄 Skyliner → 日暮里（依班次）</li>
-            <li>🧳 日暮里 → 有樂町寄行李</li>
-            <li>🛍 UNIQLO TOKYO、GU 感謝祭</li>
-            <li>💊 OS Drug</li>
-            <li>🌙 皇居外苑、二重橋（夜景散步）</li>
-          </ul>
-        </article>
+  <footer class="footer">
+    <div class="footer__inner">
+      <span>© 2026 Japan Trip</span><span class="sep">·</span>
+      <a href="day1.html">Start from Day 1 →</a>
+    </div>
+  </footer>
+</main>
 
-        <article class="card">
-          <h3 class="card__title">交通（含交通費）</h3>
-          <ul class="list">
-            <li>日暮里 → 有樂町：JR（¥180）</li>
-            <li class="note">Skyliner 班次/票價：請填你實際購買版本（Notion 目前只列 Skyliner 票 548）</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3 class="card__title">三餐</h3>
-          <div class="text">
-            <ul class="list">
-              <li>晚餐：東京車站附近（請填你想吃的店/區域）</li>
-              <li>宵夜：神田周邊（可選）</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3 class="card__title">住宿</h3>
-          <div class="text">
-            神田站附近（飯店：請填）<br />
-            Check-in：請填（可晚到）
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Day 2–Day 6 (模板，直接貼 Notion 內容就好) -->
-    <section id="day2" class="day" data-title="Day 2">
-      <div class="day__head">
-        <h2 class="day__title">Day 2 <span class="day__date">｜（請填日期/星期）</span></h2>
-        <div class="day__tag">東京</div>
-      </div>
-      <div class="grid">
-        <article class="card"><h3 class="card__title">行程</h3><div class="text">在這裡貼 Day 2 行程（條列）</div></article>
-        <article class="card"><h3 class="card__title">交通（含交通費）</h3><div class="text">在這裡貼 Day 2 交通與費用（可用：路線｜¥｜時間）</div></article>
-        <article class="card"><h3 class="card__title">三餐</h3><div class="text">早餐/午餐/晚餐（可填店名或區域）</div></article>
-        <article class="card"><h3 class="card__title">住宿</h3><div class="text">住宿地點/飯店/Check-in</div></article>
-      </div>
-    </section>
-
-    <section id="day3" class="day" data-title="Day 3">
-      <div class="day__head">
-        <h2 class="day__title">Day 3 <span class="day__date">｜（請填日期/星期）</span></h2>
-        <div class="day__tag">東京 → 橫濱</div>
-      </div>
-      <div class="grid">
-        <article class="card"><h3 class="card__title">行程</h3><div class="text">在這裡貼 Day 3 行程</div></article>
-        <article class="card"><h3 class="card__title">交通（含交通費）</h3><div class="text">在這裡貼 Day 3 交通與費用</div></article>
-        <article class="card"><h3 class="card__title">三餐</h3><div class="text">在這裡貼 Day 3 三餐</div></article>
-        <article class="card"><h3 class="card__title">住宿</h3><div class="text">橫濱住宿資訊</div></article>
-      </div>
-    </section>
-
-    <section id="day4" class="day" data-title="Day 4">
-      <div class="day__head">
-        <h2 class="day__title">Day 4 <span class="day__date">｜（請填日期/星期）</span></h2>
-        <div class="day__tag">橫濱</div>
-      </div>
-      <div class="grid">
-        <article class="card"><h3 class="card__title">行程</h3><div class="text">在這裡貼 Day 4 行程</div></article>
-        <article class="card"><h3 class="card__title">交通（含交通費）</h3><div class="text">在這裡貼 Day 4 交通與費用</div></article>
-        <article class="card"><h3 class="card__title">三餐</h3><div class="text">在這裡貼 Day 4 三餐</div></article>
-        <article class="card"><h3 class="card__title">住宿</h3><div class="text">橫濱住宿資訊</div></article>
-      </div>
-    </section>
-
-    <section id="day5" class="day" data-title="Day 5">
-      <div class="day__head">
-        <h2 class="day__title">Day 5 <span class="day__date">｜（請填日期/星期）</span></h2>
-        <div class="day__tag">橫濱/東京（連假彈性）</div>
-      </div>
-      <div class="grid">
-        <article class="card"><h3 class="card__title">行程</h3><div class="text">在這裡貼 Day 5 行程</div></article>
-        <article class="card"><h3 class="card__title">交通（含交通費）</h3><div class="text">在這裡貼 Day 5 交通與費用</div></article>
-        <article class="card"><h3 class="card__title">三餐</h3><div class="text">在這裡貼 Day 5 三餐</div></article>
-        <article class="card"><h3 class="card__title">住宿</h3><div class="text">住宿資訊</div></article>
-      </div>
-    </section>
-
-    <section id="day6" class="day" data-title="Day 6">
-      <div class="day__head">
-        <h2 class="day__title">Day 6 <span class="day__date">｜（請填日期/星期）</span></h2>
-        <div class="day__tag">回程日</div>
-      </div>
-      <div class="grid">
-        <article class="card"><h3 class="card__title">行程</h3><div class="text">在這裡貼 Day 6 行程</div></article>
-        <article class="card"><h3 class="card__title">交通（含交通費）</h3><div class="text">橫濱 → 羽田：京急（約 30–35 分 / ¥請填）</div></article>
-        <article class="card"><h3 class="card__title">三餐</h3><div class="text">早餐簡單吃 / 機場再補</div></article>
-        <article class="card"><h3 class="card__title">住宿</h3><div class="text">—</div></article>
-      </div>
-    </section>
-
-    <section id="tips" class="tips" data-title="Tips">
-      <h2 class="tips__title">Tips</h2>
-      <div class="tips__grid">
-        <article class="card">
-          <h3 class="card__title">Day 1 即時判斷（UNIQLO 20:00 關門）</h3>
-          <div class="text">
-            <ul class="list">
-              <li><strong>≤ 18:30</strong> 到日暮里：直衝有樂町 → 先寄置物櫃 → UNIQLO</li>
-              <li><strong>18:31–18:45</strong>：能否 <strong>19:30</strong> 前到有樂町月台？能 → 衝；不能 → Plan B</li>
-              <li><strong>≥ 18:46</strong>：Plan B（東京站晚餐＋皇居外苑）</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3 class="card__title">行李策略</h3>
-          <div class="text">
-            <ul class="list">
-              <li>一般狀況：優先寄放飯店（穩定、少焦慮）</li>
-              <li>時間壓力夜（像 Day 1）：優先有樂町/東京站置物櫃</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3 class="card__title">備註</h3>
-          <div class="text">
-            <ul class="list">
-              <li>票價建議都填「¥」，手機看起來最直覺</li>
-              <li>每一天也可加 Google Maps 連結（貼網址即可）</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="footer__inner">
-        <span>© 2026 Tokyo / Yokohama Trip</span>
-        <span class="sep">·</span>
-        <a href="#overview">Back to top</a>
-      </div>
-    </footer>
-
-  </main>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
