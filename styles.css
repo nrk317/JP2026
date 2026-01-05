@@ -339,3 +339,73 @@ a:hover{text-decoration:underline;}
   .nav{width:100%;}
   .badges{margin-left:0; padding-left:0;}
 }
+/* ===== Checklist / Ledger helpers ===== */
+.checkRow{
+  align-items:center;
+}
+.checkRow input[type="checkbox"]{
+  width:18px; height:18px;
+  accent-color: var(--accent);
+  margin-top:2px;
+}
+.smallInput{
+  width:100%;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:10px 12px;
+  font-size:14px;
+  outline:none;
+}
+.smallInput:focus{
+  border-color: rgba(15,74,60,.35);
+  box-shadow: 0 0 0 3px rgba(15,74,60,.10);
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid rgba(15,74,60,.25);
+  background: rgba(15,74,60,.08);
+  color: var(--accent);
+  font-weight:900;
+  cursor:pointer;
+}
+.btn:hover{ background: rgba(15,74,60,.12); }
+.btn.secondary{
+  border-color: var(--line);
+  background: rgba(15,23,42,.03);
+  color: var(--text);
+}
+.grid3{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:10px;
+}
+@media (max-width:860px){
+  .grid3{ grid-template-columns:1fr; }
+}
+.table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:14px;
+}
+.table th, .table td{
+  padding:10px 10px;
+  border-bottom:1px solid var(--line);
+  font-size:13px;
+  vertical-align:top;
+}
+.table th{
+  background: rgba(15,74,60,.06);
+  text-align:left;
+  font-weight:900;
+  color: var(--accent);
+}
+.table tr:last-child td{ border-bottom:none; }
+.table .muted{ color: var(--muted); }
+.right{ text-align:right; }
