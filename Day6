@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Day 6｜回程：橫濱 → 羽田</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <div class="brand">
+      <div class="brand__title">Day 6</div>
+      <div class="brand__sub">回程日｜橫濱 → 羽田三航廈（京急）</div>
+    </div>
+    <nav class="nav">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="day1.html">Day 1</a>
+      <a class="nav__link" href="day2.html">Day 2</a>
+      <a class="nav__link" href="day3.html">Day 3</a>
+      <a class="nav__link" href="day4.html">Day 4</a>
+      <a class="nav__link" href="day5.html">Day 5</a>
+      <a class="nav__link" href="day6.html">Day 6</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="dayHead">
+    <h1 class="dayHead__title">Day 6｜回程</h1>
+    <div class="dayHead__sub">🧳 退房 → 🚆 京急本線 → ✈️ 羽田</div>
+  </div>
+
+  <div class="grid">
+    <section>
+      <div class="section-header h-plan">🗺 行程</div>
+      <div class="section-card">
+        <ul class="list">
+          <li>🧳 退房（建議預留 15–20 分整理/寄放）</li>
+          <li>🚆 前往羽田機場（三航廈）</li>
+          <li>✈️ 起飛前：安檢/退稅/伴手禮最後補貨</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header h-trans">🚃 交通費（¥）</div>
+      <div class="section-card">
+        <ul class="list">
+          <li>🚆 橫濱 → 羽田三航廈：京急本線 ¥363</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header h-food">🍽 三餐</div>
+      <div class="section-card">
+        <ul class="list">
+          <li>☕ 早餐：飯店附近簡單吃 / 便利商店</li>
+          <li>🍱 午餐：機場內（看登機時間彈性）</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header h-stay">🏨 住宿</div>
+      <div class="section-card">
+        <ul class="list">
+          <li>—</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <section>
+    <div class="section-header h-spot">📍 小提醒</div>
+    <div class="spot-card">
+      <h4>✈️ 羽田機場節奏</h4>
+      <p>你從橫濱去羽田很順，但建議仍留足「轉乘＋安檢」緩衝。若想買伴手禮，最好把到機場時間抓得更寬鬆。</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="day5.html">← Prev: Day 5</a><span class="sep">·</span>
+      <a href="index.html">Back Home →</a>
+    </div>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
