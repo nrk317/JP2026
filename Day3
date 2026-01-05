@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Day 3｜乃木坂・神宮外苑・新宿 → 橫濱</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <div class="brand">
+      <div class="brand__title">Day 3</div>
+      <div class="brand__sub">退房寄放 → 乃木坂 → 神宮外苑 → 新宿 → 橫濱</div>
+    </div>
+    <nav class="nav">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="day1.html">Day 1</a>
+      <a class="nav__link" href="day2.html">Day 2</a>
+      <a class="nav__link" href="day3.html">Day 3</a>
+      <a class="nav__link" href="day4.html">Day 4</a>
+      <a class="nav__link" href="day5.html">Day 5</a>
+      <a class="nav__link" href="day6.html">Day 6</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="dayHead">
+    <h1 class="dayHead__title">Day 3｜東京 → 橫濱</h1>
+    <div class="dayHead__sub">🧳 退房寄放｜⛩ 乃木神社｜⚾ 神宮球場｜🛍 新宿｜🌃 橫濱夜逛</div>
+  </div>
+
+  <div class="grid">
+    <section>
+      <div class="section-header h-plan">🗺 行程</div>
+      <div class="section-card">
+        <ul class="list">
+          <li>🧳 上午退房 → 飯店寄放行李</li>
+          <li>⛩ 上午：乃木神社</li>
+          <li>⚾ 上午：神宮球場（乃木坂一帶步行可到）</li>
+          <li>🛍 下午：新宿 西村裕二商店</li>
+          <li>📚 下午：紀伊國屋書店</li>
+          <li>🧳 回神田拿行李</li>
+          <li>🌃 晚上：橫濱車站周邊逛街</li>
+          <li>🛍 マルイシティ（20:30）：吉伊卡哇、寶可夢中心</li>
+          <li>🛍 橫濱ビブレ（21:00）：一番賞公式店、GU、安麗美特</li>
+          <li>🛒 西口唐吉（24H）</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header h-trans">🚃 交通費（¥）</div>
+      <div class="section-card">
+        <ul class="list">
+          <li>🚇 神田 → 表參道 → 乃木坂：Metro ¥209</li>
+          <li>🚶‍♀️ 步行：乃木坂 → 神宮球場</li>
+          <li>🚆 信濃町 → 新宿：JR ¥150</li>
+          <li>🚆 新宿 → 神田：JR ¥180</li>
+          <li>🚆 神田 → 東京 → 橫濱：JR ¥580</li>
+          <li>🧾 交通費加總：¥1119</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header h-food">🍽 三餐</div>
+      <div class="section-card">
+        <ul class="list">
+          <li>🍳 早餐：飯店</li>
+          <li>🥞 點心：銀座西鬆餅 <a href="https://maps.app.goo.gl/MLtnWu6L9vQrjkEL7" target="_blank" rel="noopener">Google Maps</a></li>
+          <li>🍜 午餐：新宿 元祖油堂 <a href="https://maps.app.goo.gl/pk58WtHfa1dmAEXu6" target="_blank" rel="noopener">Google Maps</a></li>
+          <li>🍣 晚餐：三浦三崎港（橫濱ポルタ店・23:00） <a href="https://maps.app.goo.gl/HNNUB5sdAMLjXg1WA" target="_blank" rel="noopener">Google Maps</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header h-stay">🏨 住宿</div>
+      <div class="section-card">
+        <ul class="list">
+          <li>🏨 ホテル プラム 横浜 <a href="https://maps.app.goo.gl/toaVxkc9YhwiX5LS9" target="_blank" rel="noopener">Google Maps</a></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <section>
+    <div class="section-header h-spot">📍 景點介紹</div>
+
+    <div class="spot-card">
+      <h4>⛩ 乃木神社（乃木坂）</h4>
+      <p>氣氛安靜、節奏很舒服的一站。你安排「乃木神社 → 神宮球場」用步行串起來，會是很有東京街道感的路段（不是觀光點跳點）。</p>
+    </div>
+
+    <div class="spot-card">
+      <h4>⚾ 神宮球場</h4>
+      <p>即使不看球，外圍散步也很有「東京運動公園」的空氣感。早上走到這裡剛好避開新宿的人潮壓力，節奏會更順。</p>
+    </div>
+
+    <div class="spot-card">
+      <h4>📚 紀伊國屋書店（新宿）</h4>
+      <p>如果你喜歡逛書店，這裡非常值得：樓層分類清楚，逛起來像在逛一個「安靜版的新宿」。適合當作下午行程的休息點。</p>
+    </div>
+
+    <div class="spot-card">
+      <h4>🌃 橫濱車站周邊（丸井／Vivre／唐吉）</h4>
+      <p>你這晚是「購物＋補貨」模式：把關店時間當作節奏控管（20:30、21:00），最後再用 24H 唐吉當收尾，完成度很高。</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="day2.html">← Prev: Day 2</a><span class="sep">·</span>
+      <a href="day4.html">Next: Day 4 →</a>
+    </div>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
