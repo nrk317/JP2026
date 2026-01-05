@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>記帳｜快速輸入</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <div class="brand">
+      <div class="brand__title">記帳</div>
+      <div class="brand__sub">快速輸入：品名 / 金額 / 誰付的｜自動合計（本機瀏覽器）</div>
+    </div>
+    <nav class="nav">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="day1.html">Day 1</a>
+      <a class="nav__link" href="day2.html">Day 2</a>
+      <a class="nav__link" href="day3.html">Day 3</a>
+      <a class="nav__link" href="day4.html">Day 4</a>
+      <a class="nav__link" href="day5.html">Day 5</a>
+      <a class="nav__link" href="day6.html">Day 6</a>
+      <a class="nav__link" href="checklist.html">清單</a>
+      <a class="nav__link" href="ledger.html">記帳</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="dayHead">
+    <h1 class="dayHead__title">快速記帳</h1>
+    <div class="dayHead__sub">➕ 輸入即保存｜📊 自動合計｜⬇️ 可匯出 CSV</div>
+  </div>
+
+  <section>
+    <div class="section-header h-trans">🧾 新增一筆</div>
+    <div class="section-card">
+      <div class="grid3">
+        <input id="name" class="smallInput" placeholder="品名（例：午餐、車票、藥妝、伴手禮…）" />
+        <input id="amount" class="smallInput" inputmode="numeric" placeholder="金額（¥）" />
+        <select id="payer" class="smallInput">
+          <option value="我">我</option>
+          <option value="旅伴">旅伴</option>
+          <option value="共同">共同</option>
+        </select>
+      </div>
+
+      <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
+        <button id="add" class="btn">➕ 加入</button>
+        <button id="export" class="btn secondary">⬇️ 匯出 CSV</button>
+        <button id="reset" class="btn secondary">♻️ 清空全部</button>
+        <span class="badge">提示：資料存於本機瀏覽器（換手機不會同步）</span>
+      </div>
+
+      <div class="kv">
+        <div class="kv__left">
+          <p class="kv__k">🧾 總支出</p>
+          <p class="kv__v"><span id="total">¥0</span></p>
+        </div>
+        <div class="badges">
+          <span class="badge badge--money">我：<span id="sumMe">¥0</span></span>
+          <span class="badge">旅伴：<span id="sumBuddy">¥0</span></span>
+          <span class="badge">共同：<span id="sumBoth">¥0</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-top:14px;">
+    <div class="section-header h-food">📒 明細</div>
+    <div class="section-card">
+      <table class="table">
+        <thead>
+          <tr>
+            <th style="width:120px;">日期</th>
+            <th>品名</th>
+            <th style="width:110px;">誰付的</th>
+            <th style="width:120px;" class="right">金額</th>
+            <th style="width:90px;"></th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="checklist.html">← 去清單</a><span class="sep">·</span>
+      <a href="index.html">Home →</a>
+    </div>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+<script>
+  const KEY = "jp2026_ledger_v1";
+
+  function load(){
+    try{
+      const raw = localStorage.getItem(KEY);
+      if(!raw) return [];
+      const data = JSON.parse(raw);
+      return Array.isArray(data) ? data : [];
+    }catch{ return []; }
+  }
+  function save(list){ localStorage.setItem(KEY, JSON.stringify(list)); }
+
+  let list = load();
+
+  const $name = document.getElementById("name");
+  const $amount = document.getElementById("amount");
+  const $payer = document.getElementById("payer");
+  const $add = document.getElementById("add");
+  const $export = document.getElementById("export");
+  const $reset = document.getElementById("reset");
+  const $rows = document.getElementById("rows");
+
+  const $total = document.getElementById("total");
+  const $sumMe = document.getElementById("sumMe");
+  const $sumBuddy = document.getElementById("sumBuddy");
+  const $sumBoth = document.getElementById("sumBoth");
+
+  function fmtYen(n){
+    const v = Number(n || 0);
+    return "¥" + v.toLocaleString("ja-JP");
+  }
+
+  function today(){
+    const d = new Date();
+    const y = d.getFullYear();
+    const m = String(d.getMonth()+1).padStart(2,"0");
+    const da = String(d.getDate()).padStart(2,"0");
+    return `${y}-${m}-${da}`;
+  }
+
+  function render(){
+    $rows.innerHTML = "";
+
+    let total = 0, me = 0, buddy = 0, both = 0;
+
+    if(list.length === 0){
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td class="muted" colspan="5">目前沒有資料。上面輸入一筆就會自動出現在這裡。</td>`;
+      $rows.appendChild(tr);
+    }
+
+    list.forEach(item => {
+      total += item.amount;
+      if(item.payer === "我") me += item.amount;
+      if(item.payer === "旅伴") buddy += item.amount;
+      if(item.payer === "共同") both += item.amount;
+
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td class="muted">${item.date}</td>
+        <td>${escapeHtml(item.name)}</td>
+        <td>${escapeHtml(item.payer)}</td>
+        <td class="right"><strong>${fmtYen(item.amount)}</strong></td>
+        <td class="right"><button class="btn secondary" data-del="${item.id}" style="padding:6px 10px;">刪除</button></td>
+      `;
+      tr.querySelector('[data-del]').addEventListener("click", () => {
+        list = list.filter(x => x.id !== item.id);
+        save(list);
+        render();
+      });
+      $rows.appendChild(tr);
+    });
+
+    $total.textContent = fmtYen(total);
+    $sumMe.textContent = fmtYen(me);
+    $sumBuddy.textContent = fmtYen(buddy);
+    $sumBoth.textContent = fmtYen(both);
+  }
+
+  function add(){
+    const name = $name.value.trim();
+    const amount = Number(String($amount.value).replace(/[^\d.]/g,""));
+    const payer = $payer.value;
+
+    if(!name || !Number.isFinite(amount) || amount <= 0) return;
+
+    list.unshift({
+      id: crypto.randomUUID(),
+      date: today(),
+      name,
+      payer,
+      amount: Math.round(amount)
+    });
+
+    save(list);
+    $name.value = "";
+    $amount.value = "";
+    $name.focus();
+    render();
+  }
+
+  $add.addEventListener("click", add);
+  [$name, $amount].forEach(el => el.addEventListener("keydown", (e) => {
+    if(e.key === "Enter") add();
+  }));
+
+  $reset.addEventListener("click", () => {
+    list = [];
+    save(list);
+    render();
+  });
+
+  $export.addEventListener("click", () => {
+    const header = ["date","name","payer","amount"];
+    const lines = [header.join(",")].concat(
+      list.map(x => [
+        x.date,
+        csvSafe(x.name),
+        csvSafe(x.payer),
+        x.amount
+      ].join(","))
+    );
+    const blob = new Blob([lines.join("\n")], { type: "text/csv;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "jp-ledger.csv";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  });
+
+  function csvSafe(s){
+    const str = String(s ?? "");
+    if(/[,"\n]/.test(str)) return `"${str.replace(/"/g,'""')}"`;
+    return str;
+  }
+  function escapeHtml(str){
+    return String(str).replace(/[&<>"']/g, (m) => ({
+      "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
+    }[m]));
+  }
+
+  render();
+</script>
+</body>
+</html>
