@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>清單｜待買勾選</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <div class="brand">
+      <div class="brand__title">清單</div>
+      <div class="brand__sub">快速勾選「已買到」｜自動保存（本機瀏覽器）</div>
+    </div>
+    <nav class="nav">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="day1.html">Day 1</a>
+      <a class="nav__link" href="day2.html">Day 2</a>
+      <a class="nav__link" href="day3.html">Day 3</a>
+      <a class="nav__link" href="day4.html">Day 4</a>
+      <a class="nav__link" href="day5.html">Day 5</a>
+      <a class="nav__link" href="day6.html">Day 6</a>
+      <a class="nav__link" href="checklist.html">清單</a>
+      <a class="nav__link" href="ledger.html">記帳</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="dayHead">
+    <h1 class="dayHead__title">待買清單</h1>
+    <div class="dayHead__sub">✅ 勾選即保存｜➕ 可新增項目｜🧹 可一鍵清空已完成</div>
+  </div>
+
+  <section>
+    <div class="section-header h-plan">🧾 快速新增</div>
+    <div class="section-card">
+      <div class="grid3">
+        <input id="itemName" class="smallInput" placeholder="品名（例如：藥妝、伴手禮、卡片包…）" />
+        <input id="itemNote" class="smallInput" placeholder="備註（可空白，例如：尺寸/口味/店名）" />
+        <button id="addBtn" class="btn">➕ 加入清單</button>
+      </div>
+      <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
+        <button id="clearDoneBtn" class="btn secondary">🧹 清除已完成</button>
+        <button id="resetAllBtn" class="btn secondary">♻️ 重置全部</button>
+        <span class="badge">提示：資料存於本機瀏覽器（換手機不會同步）</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-top:14px;">
+    <div class="section-header h-spot">🛍 清單內容</div>
+    <div class="section-card">
+      <div class="kv">
+        <div class="kv__left">
+          <p class="kv__k">📌 進度</p>
+          <p class="kv__v"><span id="progressText">0 / 0</span></p>
+        </div>
+        <div class="badges">
+          <span class="badge badge--money">已完成：<span id="doneCount">0</span></span>
+          <span class="badge">未完成：<span id="todoCount">0</span></span>
+        </div>
+      </div>
+
+      <div id="list" class="rows" style="margin-top:12px;"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="index.html">← Home</a><span class="sep">·</span>
+      <a href="ledger.html">去記帳 →</a>
+    </div>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+<script>
+  const KEY = "jp2026_checklist_v1";
+
+  const defaultItems = [
+    { id: crypto.randomUUID(), name: "伴手禮", note: "想買再細化", done: false },
+    { id: crypto.randomUUID(), name: "藥妝補貨", note: "OS Drug / 其他藥局", done: false },
+    { id: crypto.randomUUID(), name: "扭蛋 / 卡店小物", note: "秋葉原", done: false },
+  ];
+
+  function load() {
+    try {
+      const raw = localStorage.getItem(KEY);
+      if (!raw) return defaultItems;
+      const data = JSON.parse(raw);
+      return Array.isArray(data) ? data : defaultItems;
+    } catch {
+      return defaultItems;
+    }
+  }
+
+  function save(items) {
+    localStorage.setItem(KEY, JSON.stringify(items));
+  }
+
+  let items = load();
+
+  const $list = document.getElementById("list");
+  const $itemName = document.getElementById("itemName");
+  const $itemNote = document.getElementById("itemNote");
+  const $addBtn = document.getElementById("addBtn");
+  const $clearDoneBtn = document.getElementById("clearDoneBtn");
+  const $resetAllBtn = document.getElementById("resetAllBtn");
+  const $progressText = document.getElementById("progressText");
+  const $doneCount = document.getElementById("doneCount");
+  const $todoCount = document.getElementById("todoCount");
+
+  function render() {
+    $list.innerHTML = "";
+
+    const done = items.filter(x => x.done).length;
+    const total = items.length;
+    $progressText.textContent = `${done} / ${total}`;
+    $doneCount.textContent = done;
+    $todoCount.textContent = total - done;
+
+    if (items.length === 0) {
+      const empty = document.createElement("div");
+      empty.className = "row row--soft";
+      empty.innerHTML = `
+        <div class="row__icon">🫧</div>
+        <div class="row__body">
+          <p class="row__title">目前沒有項目</p>
+          <p class="row__meta">在上方輸入品名，按「加入清單」就可以開始勾選</p>
+        </div>`;
+      $list.appendChild(empty);
+      return;
+    }
+
+    items.forEach((it, idx) => {
+      const row = document.createElement("div");
+      row.className = "row checkRow" + (it.done ? " row--soft" : "");
+      row.innerHTML = `
+        <div class="row__icon">${it.done ? "✅" : "🛒"}</div>
+        <input type="checkbox" ${it.done ? "checked" : ""} aria-label="done" />
+        <div class="row__body">
+          <p class="row__title">${escapeHtml(it.name)}</p>
+          <p class="row__meta">${it.note ? escapeHtml(it.note) : "—"}</p>
+        </div>
+        <div class="badges">
+          ${it.done ? `<span class="badge">已買到</span>` : `<span class="badge">待購買</span>`}
+          <button class="btn secondary" data-del="${it.id}">刪除</button>
+        </div>
+      `;
+
+      const checkbox = row.querySelector('input[type="checkbox"]');
+      checkbox.addEventListener("change", () => {
+        items = items.map(x => x.id === it.id ? { ...x, done: checkbox.checked } : x);
+        save(items);
+        render();
+      });
+
+      const delBtn = row.querySelector('button[data-del]');
+      delBtn.addEventListener("click", () => {
+        items = items.filter(x => x.id !== it.id);
+        save(items);
+        render();
+      });
+
+      $list.appendChild(row);
+    });
+  }
+
+  function addItem() {
+    const name = $itemName.value.trim();
+    const note = $itemNote.value.trim();
+    if (!name) return;
+
+    items.unshift({ id: crypto.randomUUID(), name, note, done: false });
+    save(items);
+    $itemName.value = "";
+    $itemNote.value = "";
+    render();
+  }
+
+  $addBtn.addEventListener("click", addItem);
+  $itemName.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") addItem();
+  });
+  $itemNote.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") addItem();
+  });
+
+  $clearDoneBtn.addEventListener("click", () => {
+    items = items.filter(x => !x.done);
+    save(items);
+    render();
+  });
+
+  $resetAllBtn.addEventListener("click", () => {
+    items = [...defaultItems];
+    save(items);
+    render();
+  });
+
+  function escapeHtml(str){
+    return str.replace(/[&<>"']/g, (m) => ({
+      "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
+    }[m]));
+  }
+
+  render();
+</script>
+</body>
+</html>
