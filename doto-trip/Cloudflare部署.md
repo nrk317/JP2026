@@ -2,7 +2,7 @@
 
 Cloudflare Workers 提供網頁及 API，D1 保存共用行程與記帳；GitHub 只存放程式，旅行資料不會寫入公開 repository。
 
-目前程式已準備好，帳號登入與正式部署尚待完成。wrangler.jsonc 的 d1_databases 尚未綁定真實資料庫。
+已於 2026-10-06 發布至 https://jp2026-doto-trip.annie54315431.workers.dev 。wrangler.jsonc 已綁定此專案的真實 D1 資料庫。完整分享連結含私密分享金鑰，另交付給使用者，不提交至 GitHub。
 
 ## 首次發布
 
@@ -25,5 +25,7 @@ Cloudflare Workers 提供網頁及 API，D1 保存共用行程與記帳；GitHub
 ## 狀態
 
 - Worker 語法與 API 授權、衝突、資料格式檢查已完成本地驗證。
-- Cloudflare 帳號仍需有效登入；正式部署、D1 遠端驗證尚未完成。
+- 正式部署及 D1 遠端驗證已完成：HTTPS 網頁、未授權 API 拒絕、讀取與儲存、版本衝突及測試資料清除。
 - 免費方案有使用量限制，不會因這份設定自動升級付費方案。
+
+這次透過 Cloudflare 官方 REST API 發布，因為本機環境限制官方 CLI 的子程序執行。bundle-cloudflare.mjs 可把目前介面打包成單一 Worker 模組；一般環境可直接使用 Wrangler 的 ASSETS 設定發布。這版沒有設定 GitHub 自動部署：更改 GitHub 程式後仍須再次發布至同一個 Worker。

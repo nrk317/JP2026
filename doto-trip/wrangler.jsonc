@@ -3,7 +3,21 @@
   "main": "worker.mjs",
   "compatibility_date": "2026-10-06",
   "workers_dev": true,
-  "assets": {"directory": "./public", "binding": "ASSETS", "run_worker_first": true},
-  "d1_databases": [],
-  "observability": {"enabled": false}
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "jp2026-doto-trip",
+      "database_id": "f893a3de-5596-44a4-a02e-cb8268c871dd",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "observability": {
+    "enabled": false
+  },
+  "account_id": "4dea22dffd859e799a49bc4124381769"
 }
