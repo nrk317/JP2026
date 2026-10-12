@@ -29,3 +29,7 @@
 .meal-detail{margin:12px 0;overflow-wrap:anywhere}
 .meal-detail>.sub{display:block;margin-bottom:6px}
 .meal-summary>button{margin-top:10px}
+
+.day-summary{display:grid;grid-template-columns:80px minmax(0,1fr);gap:8px 14px;margin:18px 0 0;padding-top:16px;border-top:1px solid #ffffff30;font-size:.875rem}
+.day-summary dt{color:#bedbe7;font-weight:500}
+.day-summary dd{margin:0;color:#fff;white-space:pre-wrap;overflow-wrap:anywhere}
