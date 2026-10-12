@@ -15,3 +15,17 @@
 .tag.region-8{background:#eef1dc;color:#586735}
 .tag.region-9{background:#f4e4df;color:#80594f}
 .panel>.tag{margin-bottom:6px}
+
+/* Meals use warm accents while keeping the large cards white. */
+.tag.meal-breakfast{background:#fff0c9;color:#775016}
+.tag.meal-lunch{background:#ffe5d5;color:#874327}
+.tag.meal-dinner{background:#f9dfe8;color:#873d59}
+.meal-event-breakfast{border-left:4px solid #dfb44d}
+.meal-event-lunch{border-left:4px solid #e49462}
+.meal-event-dinner{border-left:4px solid #cf85a0}
+.meal-summary{border:1px solid var(--line);border-radius:12px;padding:14px;margin-top:12px;background:#fff}
+.meal-summary.meal-missing{background:#fff8e9;border:1px solid #dcb765;box-shadow:inset 3px 0 #d4a442}
+.meal-alert{color:#865214;font-size:.8125rem}
+.meal-detail{margin:12px 0;overflow-wrap:anywhere}
+.meal-detail>.sub{display:block;margin-bottom:6px}
+.meal-summary>button{margin-top:10px}
