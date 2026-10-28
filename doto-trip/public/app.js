@@ -28,6 +28,10 @@ function actions(coll,id){return `<div class="small-actions">${btn('編輯',`edi
 const mealTypes=['早餐','午餐','晚餐'];
 function mealClass(type){return ({早餐:'breakfast',午餐:'lunch',晚餐:'dinner'})[type]||''}
 function mealsPanel(day){return `<section class="panel meals-panel"><h3>當日三餐</h3><p class="sub">與當日時間軸同步；方案 B 另列為備案。</p>${mealTypes.map(type=>{const events=day.events.filter(e=>e.type===type),main=events.filter(e=>e.plan!=='B');return `<div class="meal-summary ${mealClass(type)} ${main.length?'':'meal-missing'}"><div class="row wrap"><span class="tag meal-${mealClass(type)}">${type}</span>${!main.length?'<strong class="meal-alert">'+(events.length?'僅有備案 · 主選待安排':'尚未安排')+'</strong>':''}</div>${events.map(e=>`<div class="meal-detail"><strong>${esc(e.title)}</strong><span class="sub">${esc(e.time||'時間待定')} · ${e.plan==='B'?'方案 B 備案':e.plan==='A'?'方案 A':'A / B 共用'}</span>${e.location?`<span class="sub">${esc(e.location)}</span>`:''}${btn('編輯',`edit:events:${e.id}`)}</div>`).join('')}${btn(main.length?'再加一個選項':'安排'+type,`meal:${day.id}:${type}`)}</div>`}).join('')}</section>`}
+function taxRefundPanel(){
+ const captions=['確認結果：完成／未完成','Visit Japan Web 入口','連接機場專用 Wi-Fi','選擇退稅手續','確認購買紀錄與執行確認','綠燈／紅燈結果說明','專用 Wi-Fi 與適用機場','2026 年 11 月新制圖解','先付後退方式 Q&A'];
+ return `<section class="panel tax-refund-panel"><div class="row wrap"><h3>日本退稅新制 · 圖片指南</h3><span class="tag booking-ticket">2026 / 11 / 01 起</span></div><p class="sub">收藏的退稅流程與操作畫面，共 9 張；點圖可開啟大圖。</p><div class="link-row">${link('https://www.threads.com/@airi18.12/post/DfBfq6RnxKe','原貼文 · @airi18.12')}${link('https://www.mlit.go.jp/kankocho/tax-free/page01_000001_00021.html','日本觀光廳官方說明')}</div><div class="tax-image-grid">${captions.map((caption,i)=>{const src='/tax-refund/'+String(i+1).padStart(2,'0')+'.webp';return `<figure><a href="${src}" target="_blank" rel="noopener noreferrer" aria-label="開啟第 ${i+1} 張大圖：${esc(caption)}"><img src="${src}" alt="第 ${i+1} 張：${esc(caption)}" loading="lazy" decoding="async"></a><figcaption>${i+1}. ${esc(caption)}</figcaption></figure>`}).join('')}</div><p class="sub">圖片來源：Threads @airi18.12 指定貼文；包含官方宣導資料及操作示意圖。實際手續以官方與機場現場指示為準。</p></section>`
+}
 function dayLodging(day){
  if(String(day.lodging||'').trim())return day.lodging;
  if(!day.date)return '住宿待安排';
@@ -89,6 +93,7 @@ function render(){if(!state)return;
  html+=state.days.length?`<div class="grid">${state.days.map(d=>`<div class="panel"><h3>${esc(d.date||'日期待定')} · ${esc(d.title)}</h3>${kv(d,[['weather','天氣／確認'],['road','道路／確認'],['planB','方案 B']])}${btn('更新紀錄',`edit:days:${d.id}`)}</div>`).join('')}</div>`:empty('新增旅行日期後，逐日記錄','每一天都保留天氣、道路確認時間與方案 B 欄位。','add:days','新增一天');
  }else if(tab==='contacts'){
  html=header('重要聯絡與旅行備註','集中旅伴、保險、業者聯絡方式。','add:contacts','新增資訊');
+ html+=taxRefundPanel();
  html+=`<div class="panel"><div class="row"><h3>旅行共用備註</h3>${btn('編輯','settings')}</div><p class="note">${esc(state.settings.notes||'旅行共用備註待填入')}</p><div class="small-actions">${btn('旅行設定','settings')}${btn('下載資料備份','export')}</div></div>`;
  html+=state.contacts.length?`<div class="grid">${state.contacts.map(c=>`<article class="panel"><span class="tag">${esc(c.type)}</span><h3 style="margin-top:12px">${esc(c.name)}</h3>${kv(c,[['phone','電話'],['notes','備註']])}<div class="link-row">${link(c.url,'相關資料')}</div>${actions('contacts',c.id)}</article>`).join('')}</div>`:empty('重要資訊待填入','新增保險與業者聯絡資訊，方便旅途中快速找到。','add:contacts','新增聯絡資訊');
  }

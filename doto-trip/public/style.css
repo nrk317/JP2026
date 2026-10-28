@@ -33,3 +33,11 @@
 .day-summary{display:grid;grid-template-columns:80px minmax(0,1fr);gap:8px 14px;margin:18px 0 0;padding-top:16px;border-top:1px solid #ffffff30;font-size:.875rem}
 .day-summary dt{color:#bedbe7;font-weight:500}
 .day-summary dd{margin:0;color:#fff;white-space:pre-wrap;overflow-wrap:anywhere}
+
+.tax-image-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:20px 0}
+.tax-image-grid figure{margin:0;min-width:0}
+.tax-image-grid a{display:flex;align-items:center;justify-content:center;height:280px;background:#f6f8fa;border:1px solid var(--line);border-radius:12px;padding:8px;overflow:hidden}
+.tax-image-grid img{display:block;max-width:100%;max-height:100%;object-fit:contain}
+.tax-image-grid figcaption{font-size:.8125rem;color:var(--muted);margin-top:7px}
+@media(max-width:1050px){.tax-image-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.tax-image-grid{grid-template-columns:1fr}.tax-image-grid a{height:330px}}
